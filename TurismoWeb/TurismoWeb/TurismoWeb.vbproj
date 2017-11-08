@@ -312,6 +312,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="ClasesTurismo\Cliente.vb" />
+    <Compile Include="ClasesTurismo\Util.vb" />
+    <Compile Include="Controllers\ClienteController.vb" />
+    <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -361,7 +365,6 @@
     </None>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\index.vbhtml" />
     <Content Include="scripts\dist\fonts\fontawesome-webfont.eot" />
     <Content Include="scripts\dist\fonts\fontawesome-webfont.ttf" />
     <Content Include="scripts\dist\fonts\fontawesome-webfont.woff" />
@@ -372,6 +375,9 @@
     <Content Include="scripts\fonts\fontawesome-webfont.woff" />
     <Content Include="scripts\fonts\fontawesome-webfont.woff2" />
     <Content Include="scripts\fonts\FontAwesome.otf" />
+    <Content Include="Views\Home\Index.vbhtml" />
+    <Content Include="Views\Cliente\Index.vbhtml" />
+    <Content Include="Views\Cliente\Create.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -381,7 +387,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
