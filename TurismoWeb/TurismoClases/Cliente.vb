@@ -189,7 +189,7 @@ Public Class Cliente
     Public Function RecuperarRegistro(ByVal vCodigo As Integer) As Cliente
         Try
             Dim dtCliente As New Data.DataTable("cliente")
-            dtCliente = gDatos.TraerDataTable("spListarClienteNombre", vCodigo)
+            dtCliente = gDatos.TraerDataTable("spListarClientePorID", vCodigo)
             If dtCliente.Rows.Count > 0 Then
                 Dim vCliente As New Cliente
                 vCliente.pClienteID = dtCliente.Rows(0).Item("ClienteID")
@@ -202,7 +202,7 @@ Public Class Cliente
                 vCliente.pDireccion = dtCliente.Rows(0).Item("Direccion")
                 vCliente.pEmail = dtCliente.Rows(0).Item("Email")
                 vCliente.pFechaNacimiento = dtCliente.Rows(0).Item("FechaNacimiento")
-                vCliente.pProfesion = dtCliente.Rows(0).Item("Profesion")
+                vCliente.pProfesion = dtCliente.Rows(0).Item("ProfesionID")
                 vCliente.pSexo = dtCliente.Rows(0).Item("Sexo")
                 vCliente.pTipoClienteID = dtCliente.Rows(0).Item("TipoClienteID")
                 vCliente.pEstadoSistema = dtCliente.Rows(0).Item("EstadoSistema")

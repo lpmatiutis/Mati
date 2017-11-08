@@ -347,3 +347,10 @@ as
 begin
 	select * from Reserva where ReservaID=@ReservaID
 end
+
+create procedure spListarClientePorID (@id int)
+as
+begin
+	select * from Cliente where ClienteID=@id
+end
+go

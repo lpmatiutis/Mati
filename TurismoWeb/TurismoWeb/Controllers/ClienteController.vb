@@ -18,6 +18,7 @@ Namespace Controllers
             Dim dtClients As New DataTable
             dtClients = Cliente.RecuperarRegistrosCliente
             ViewData("Cliente") = dtClients.AsEnumerable
+            Return View()
         End Function
 
         <HttpPost()>

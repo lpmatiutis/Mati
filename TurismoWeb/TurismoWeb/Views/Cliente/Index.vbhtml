@@ -13,7 +13,7 @@ End Code
 </head>
 <body>
     <h3>
-        <a href="" class="btn btn-success"> Nuevo CLiente </a>
+        <a href="/Cliente/Create" class="btn btn-success"> Nuevo CLiente </a>
     </h3>
 
     <table class="table table-bordered table-hover">

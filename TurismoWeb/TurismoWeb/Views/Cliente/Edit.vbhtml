@@ -15,7 +15,7 @@ End Code
     <form action="Edit" method="post">
         <input type="hidden" name="clienteid" value="@Model.pClienteID" />
         Nombre: <input type="text" name="nombre" value="@Model.pNombre" /><br />
-        Apellido: <input type="text" name="apellido" value="@Model.Apellido" /><br />
+        Apellido: <input type="text" name="apellido" value="@Model.pApellido" /><br />
         Tipo Documento: <input type="text" name="tipodocumento" value="@Model.pTipoDocumento" /><br />
         Nro Documento: <input type="text" name="nrodocumento" value="@Model.pNroDocumento" /><br />
         Estado Civil: <input type="text" name="estadocivil" value="@Model.pEstadoCivil" /><br />
@@ -28,8 +28,8 @@ End Code
         TipoCliente: <input type="text" name="tipocliente" value="@Model.pTipoClienteID" /><br />
         Estado Sistema: <input type="text" name="estadosistema" value="@Model.pEstadoSistema" /><br />
         Estado Sistema:<select name="estadosistema">
-            <option value="S" @IIf(Model.pEstadoSistema = "S", "Selected", "")>Si</option>
-            <option value="N" @IIf(Model.pEstadoSistema = "N", "Selected", "")>No</option>
+            <option value="S" @IIf(Model.pEstadoSistema = "1", "Selected", "")>Si</option>
+            <option value="N" @IIf(Model.pEstadoSistema = "0", "Selected", "")>No</option>
         </select>
         <br />
         <input type="submit" value="Guardar" />
