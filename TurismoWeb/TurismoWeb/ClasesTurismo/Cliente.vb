@@ -204,7 +204,7 @@ public property pTipoClienteID() as Integer
                 vCliente.pProfesion = dtCliente.Rows(0).Item("Profesion")
                 vCliente.pSexo = dtCliente.Rows(0).Item("Sexo")
                 vCliente.pTipoClienteID = dtCliente.Rows(0).Item("TipoClienteID")
-                vUsuario.pEstadoSistema = dtUsuario.Rows(0).Item("EstadoSistema")
+                vCliente.pEstadoSistema = dtUsuario.Rows(0).Item("EstadoSistema")
                 Return vCliente
             Else
                 Return Nothing

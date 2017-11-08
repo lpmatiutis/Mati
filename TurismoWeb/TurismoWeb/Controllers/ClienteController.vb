@@ -40,6 +40,32 @@ Namespace Controllers
             End With
             Return RedirectToAction("Index")
         End Function
+
+        Function Edit(id As Integer) As ActionResult
+            Dim vCliente As New Cliente
+            vCliente = vCliente.RecuperarRegistro(id)
+            Return View(vCliente)
+        End Function
+
+        <HttpPost>
+        Function Edit(form As FormCollection) As ActionResult
+            Dim vCliente As New Cliente
+            vCliente.pNombre = form("nombre")
+            vCliente.pApellido = form("apellido")
+            vCliente.pTipoDocumento = form("tipodocumento")
+            vCliente.pNroDocumento = form("nrodocumento")
+            vCliente.pEstadoCivil = form("estadocivil")
+            vCliente.pTelefono = form("telefono")
+            vCliente.pDireccion = form("direccion")
+            vCliente.pEmail = form("email")
+            vCliente.pFechaNacimiento = form("fechanacimiento")
+            vCliente.pProfesion = form("profesion")
+            vCliente.pSexo = form("sexo")
+            vCliente.pTipoClienteID = form("tipoclienteid")
+            vCliente.pEstadoSistema = form("estadosistema")
+            vCliente.Actualizar()
+            Return RedirectToAction("Index")
+        End Function
     End Class
 
 End Namespace
