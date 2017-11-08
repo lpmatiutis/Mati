@@ -1,4 +1,6 @@
 ﻿Imports System.Web.Mvc
+Imports System.Data
+Imports TurismoClases
 
 Namespace Controllers
     Public Class ClienteController

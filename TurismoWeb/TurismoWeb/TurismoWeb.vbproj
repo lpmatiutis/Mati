@@ -312,8 +312,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="ClasesTurismo\Cliente.vb" />
-    <Compile Include="ClasesTurismo\Util.vb" />
     <Compile Include="Controllers\ClienteController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Global.asax.vb">
@@ -389,6 +387,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TurismoClases\TurismoClases.vbproj">
+      <Project>{b7c5fb4f-2940-4d59-835f-5de7e404d502}</Project>
+      <Name>TurismoClases</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

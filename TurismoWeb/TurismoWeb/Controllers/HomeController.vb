@@ -1,5 +1,5 @@
 ﻿Imports System.Web.Mvc
-
+Imports TurismoClases
 
 Namespace Controllers
     Public Class HomeController
@@ -7,7 +7,7 @@ Namespace Controllers
 
         ' GET: Home
         Function Index() As ActionResult
-            Util.inicializaSesion("M205-03", "Restaurante", "sa", "@lumno123")
+            Util.inicializaSesion("(localdb)\mssqllocaldb", "Turismo", "sa", "123456")
             Return View()
         End Function
     End Class

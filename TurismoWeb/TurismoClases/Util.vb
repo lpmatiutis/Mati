@@ -1,5 +1,5 @@
 
-Imports AccesoDatos.Restaurante.Datos
+Imports AccesoDatos.SysTurismo.Datos
 
 Public Class Util
     Public Shared gDatos As gDatos
