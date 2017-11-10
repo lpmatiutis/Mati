@@ -313,6 +313,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Controllers\ClienteController.vb" />
+    <Compile Include="Controllers\EmpleadoController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -377,6 +378,9 @@
     <Content Include="Views\Cliente\Index.vbhtml" />
     <Content Include="Views\Cliente\Create.vbhtml" />
     <Content Include="Views\Cliente\Edit.vbhtml" />
+    <Content Include="Views\Empleado\Index.vbhtml" />
+    <Content Include="Views\Empleado\Create.vbhtml" />
+    <Content Include="Views\Empleado\Edit.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

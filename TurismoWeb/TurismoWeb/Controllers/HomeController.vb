@@ -1,4 +1,5 @@
-﻿Imports System.Web.Mvc
+﻿Imports System.Data.SqlClient
+Imports System.Web.Mvc
 Imports TurismoClases
 
 Namespace Controllers
@@ -7,7 +8,10 @@ Namespace Controllers
 
         ' GET: Home
         Function Index() As ActionResult
-            Util.inicializaSesion("(localdb)\mssqllocaldb", "Turismo", "sa", "123456")
+            Dim cadenaConexion As String = "data source=(local); initial catalog=Turismo; user id=sa; password=@lumno123"
+            Dim conexion As New SqlConnection(cadenaConexion)
+
+            'Util.inicializaSesion("(localdb)\mssqllocaldb", "Turismo", "sa", "123456")
             Return View()
         End Function
     End Class
