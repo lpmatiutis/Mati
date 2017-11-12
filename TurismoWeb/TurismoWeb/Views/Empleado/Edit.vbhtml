@@ -27,8 +27,8 @@ End Code
         Estado Civil: <input type="text" name="estadocivil" value="@Model.pEstadoCivil" /><br />
         Antiguedad: <input type="text" name="antiguedad" value="@Model.pAntiguedad" /><br />
         Estado Sistema:<select name="estadosistema">
-            <option value="S" @IIf(Model.pEstadoSistema = "1", "Selected", "")>Si</option>
-            <option value="N" @IIf(Model.pEstadoSistema = "0", "Selected", "")>No</option>
+            <option value="1" @IIf(Model.pEstadoSistema = "1", "Selected", "")>Si</option>
+            <option value="0" @IIf(Model.pEstadoSistema = "0", "Selected", "")>No</option>
         </select>
         <br />
         <input type="submit" value="Guardar" />

@@ -37,6 +37,7 @@ Namespace Controllers
                 .pAntiguedad = form("antiguedad")
                 .pEstadoSistema = form("estadosistema")
             End With
+            vEmpleado.Insertar()
             Return RedirectToAction("Index")
         End Function
 

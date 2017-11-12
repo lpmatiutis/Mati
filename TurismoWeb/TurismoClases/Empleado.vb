@@ -181,7 +181,7 @@ Public Class Empleado
     Public Function RecuperarRegistroEmpleado(ByVal vCodigo As Integer) As Empleado
         Try
             Dim dtEmpleado As New Data.DataTable("Empleado")
-            dtEmpleado = gDatos.TraerDataTable("spListarEmpleadoNombre", vCodigo)
+            dtEmpleado = gDatos.TraerDataTable("spListarEmpleadoPorID", vCodigo)
             If dtEmpleado.Rows.Count > 0 Then
                 Dim vEmpleado As New Empleado
                 vEmpleado.pEmpleadoID = dtEmpleado.Rows(0).Item("EmpleadoID")

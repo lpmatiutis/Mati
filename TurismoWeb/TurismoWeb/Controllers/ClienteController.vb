@@ -41,6 +41,7 @@ Namespace Controllers
 
 
             End With
+            vCliente.Insertar()
             Return RedirectToAction("Index")
         End Function
 

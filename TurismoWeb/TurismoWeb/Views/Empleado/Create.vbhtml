@@ -25,8 +25,8 @@ End Code
         Estado Civil: <input type="text" name="estadocivil" /><br />
         Antiguedad: <input type="text" name="antiguedad" /><br />
         Estado Sistema:<select name="estadosistema">
-            <option value="S">Si</option>
-            <option value="N">No</option>
+            <option value="1">Si</option>
+            <option value="0">No</option>
         </select>
         <br />
         <input type="submit" value="Guardar" />
