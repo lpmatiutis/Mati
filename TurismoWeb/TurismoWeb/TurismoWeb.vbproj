@@ -312,6 +312,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Controllers\AlojamientoController.vb" />
     <Compile Include="Controllers\ClienteController.vb" />
     <Compile Include="Controllers\EmpleadoController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
@@ -381,6 +382,9 @@
     <Content Include="Views\Empleado\Index.vbhtml" />
     <Content Include="Views\Empleado\Create.vbhtml" />
     <Content Include="Views\Empleado\Edit.vbhtml" />
+    <Content Include="Views\Alojamiento\Index.vbhtml" />
+    <Content Include="Views\Alojamiento\Create.vbhtml" />
+    <Content Include="Views\Alojamiento\Edit.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
