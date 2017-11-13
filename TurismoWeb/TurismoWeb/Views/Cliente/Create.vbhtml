@@ -1,18 +1,10 @@
 ﻿
 @Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
     <h2>Nuevo Cliente</h2>
-    <form action="Create" method="post">
+    <form action="Create" method="post" class="form-horizontal">
         Nombre: <input type="text" name="nombre"/><br />
         Apellido: <input type="text" name="apellido" /><br />
         Tipo Documento: <input type="text" name="tipodocumento"/><br />
@@ -33,5 +25,3 @@ End Code
         <br />
         <input type="submit" value="Guardar" />
     </form>
-</body>
-</html>

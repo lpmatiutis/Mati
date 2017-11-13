@@ -1,22 +1,14 @@
 ﻿
 @Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
     <h3>
         <a href="/Cliente/Create" class="btn btn-success"> Nuevo CLiente </a>
     </h3>
 
-    <table class="table table-bordered table-hover">
+    <table id="mi_tabla" class="table table-striped table-hover table-bordered">
         <thead>
             <tr>
                 <th>Codigo</th>
@@ -61,8 +53,28 @@ End Code
             Next
         </tbody>
     </table>
+    <script type="text/javascript">
 
+        function eliminar(id) {
+            if (confirm('¿Estas seguro de eliminar el registro?')) {
+                var parametro = {
+                    id: id
+                };
+
+                $.ajax({
+                    url: '../Cliente/Eliminar',
+                    data: parametro,
+                    type: "post",
+                    cache: false,
+                    success: function (retorno) {
+                        location.reload();
+                    },
+                    error: function () {
+                        alert("se ha producido un error.");
+                    }
+                });
+            }
+        }
+    </script>
     <script src="~/js/jquery-3.2.1.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
-</body>
-</html>

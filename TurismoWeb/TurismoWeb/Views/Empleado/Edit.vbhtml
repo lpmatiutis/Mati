@@ -1,17 +1,8 @@
-﻿
+﻿@ModelType TurismoClases.Empleado
 @Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Modificar Empleado</title>
-</head>
-<body>
-   
     <h2>Modificar Empleado</h2>
     <form action="Edit" method="post">
         <input type="hidden" name="empleadoid" value="@Model.pEmpleadoID" />
@@ -34,5 +25,3 @@ End Code
         <input type="submit" value="Guardar" />
     </form>
 
-</body>
-</html>

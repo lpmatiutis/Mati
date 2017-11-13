@@ -1,16 +1,8 @@
-﻿
+﻿@ModelType TurismoClases.Cliente
 @Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Modificar Cliente</title>
-</head>
-<body>
     <h2>Modificar Cliente</h2>
     <form action="Edit" method="post">
         <input type="hidden" name="clienteid" value="@Model.pClienteID" />
@@ -28,11 +20,9 @@ End Code
         TipoCliente: <input type="text" name="tipocliente" value="@Model.pTipoClienteID" /><br />
         Estado Sistema: <input type="text" name="estadosistema" value="@Model.pEstadoSistema" /><br />
         Estado Sistema:<select name="estadosistema">
-            <option value="S" @IIf(Model.pEstadoSistema = "1", "Selected", "")>Si</option>
-            <option value="N" @IIf(Model.pEstadoSistema = "0", "Selected", "")>No</option>
+            <option value="1" @IIf(Model.pEstadoSistema = "1", "Selected", "")>Si</option>
+            <option value="0" @IIf(Model.pEstadoSistema = "0", "Selected", "")>No</option>
         </select>
         <br />
         <input type="submit" value="Guardar" />
     </form>
-</body>
-</html>

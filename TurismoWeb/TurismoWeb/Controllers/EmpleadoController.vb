@@ -8,7 +8,7 @@ Namespace Controllers
         Function Index() As ActionResult
             Dim dtEmpleados As New DataTable
             Dim vEmpleado As New Empleado
-            dtEmpleados = vEmpleado.RecuperarRegistrosEmpleado
+            dtEmpleados = Empleado.RecuperarRegistrosEmpleado
             ViewData("Empleado") = dtEmpleados.AsEnumerable
             Return View()
         End Function
