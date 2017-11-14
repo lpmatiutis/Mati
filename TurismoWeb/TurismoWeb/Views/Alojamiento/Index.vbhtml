@@ -1,16 +1,8 @@
 ﻿@Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Alojamientos</title>
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
     <h1>Alojamientos</h1>
     <h2>
         <a href="/Alojamiento/Create" class="btn btn-success">+ Crear Nuevo</a>
@@ -47,11 +39,6 @@ End Code
         </tbody>
     </table>
 
-    <!-- jQuery 2.1.4 -->
-    <script src="~/scripts/js/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="~/scripts/js/bootstrap.min.js"></script>
-
     <script type="text/javascript">
         function eliminar(id) {
             if (confirm('¿Estas seguro de eliminar el registro?')) {
@@ -74,5 +61,3 @@ End Code
             }
         }
     </script>
-</body>
-</html>

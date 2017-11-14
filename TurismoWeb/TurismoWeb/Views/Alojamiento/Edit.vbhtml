@@ -1,18 +1,8 @@
 ﻿@ModelType TurismoClases.Alojamiento
 @Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Modificar Alojamiento</title>
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-
-</head>
-<body>
     <div class="row">
         <div class="col-lg-4 col-md-7 col-sm-7 col-xs-12">
             <h1>
@@ -53,7 +43,7 @@ End Code
                 <div class="form-group">
                     <label for="estrellas" class="col-lg-2 col-md-2 col-sm-3 col-xs-12">Estrellas</label>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" class="form-control" required value="@Model.pEstrellas" name="estrellas" />
+                        <input type="number" class="form-control" required value="@Model.pEstrellas" name="estrellas" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -73,5 +63,3 @@ End Code
             </footer>
         </div>
     </form>
-</body>
-</html>

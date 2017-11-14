@@ -1,18 +1,7 @@
 ﻿
 @Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <meta charset="utf-8" />
-    <title>Create</title>
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
     <h2>Alojamiento</h2>
     <form action="/Alojamiento/Create" method="post" class="form-horizontal">
         <div class="well">
@@ -64,5 +53,3 @@ End Code
             </footer>
         </div>
     </form>
-</body>
-</html>
