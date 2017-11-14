@@ -1,10 +1,10 @@
+﻿
 @Code
     Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
     <h3>
-        <a href="/Empleado/Create" class="btn btn-success"> Nuevo Empleado </a>
-
+        <a href="/Sucursal/Create" class="btn btn-success"> Nueva Sucursal </a>
     </h3>
 
     <table id="mi_tabla" class="table table-striped table-condensed table-bordered table-hover">
@@ -12,43 +12,34 @@ End Code
             <tr>
                 <th>Codigo</th>
                 <th>Nombre</th>
-                <th>Apellido</th>
-                <th>CargoEmpleadoID</th>
-                <th>TipoDocumentoID</th>
-                <th>NroDocumento</th>
-                <th>FechaNacimiento</th>
-                <th>SucursalEmpleadoID</th>
+                <th>Ciudad ID</th>
                 <th>Telefono</th>
                 <th>Direccion</th>
-                <th>EstadoCivil</th>
-                <th>Antiguedad</th>
+                <th>Email</th>
+                <th>Cantidad Empleados</th>
                 <th>EstadoSistema</th>
             </tr>
         </thead>
         <tbody>
-            @For Each item In ViewData("Empleado")
+            @For Each item In ViewData("SucursalEmpresa")
                 @<tr>
-                    <td>@item("EmpleadoID")</td>
-                    <td>@item("Nombre")</td>
-                    <td>@item("Apellido")</td>
-                    <td>@item("CargoEmpleadoID")</td>
-                    <td>@item("TipoDocumentoID")</td>
-                    <td>@item("NroDocumento")</td>
-                    <td>@item("FechaNacimiento")</td>
                     <td>@item("SucursalEmpresaID")</td>
+                    <td>@item("Nombre")</td>
+                    <td>@item("CiudadID")</td>
                     <td>@item("Telefono")</td>
                     <td>@item("Direccion")</td>
-                    <td>@item("EstadoCivil")</td>
-                    <td>@item("Antiguedad")</td>
+                    <td>@item("Email")</td>
+                    <td>@item("CantidadEmpleados")</td>
                     <td>@item("EstadoSistema")</td>
+                   
                     <td>
-                        <a href="Empleado/Edit/@item("EmpleadoID")" class="btn btn-info">Modificar</a>
-                        <a href="javascript:eliminar(@item("EmpleadoID"))" class="btn btn-danger">Eliminar</a>
+                        <a href="Sucursal/Edit/@item("SucursalEmpresaID")" class="btn btn-info">Modificar</a>
+                        <a href="javascript:eliminar(@item("SucursalEmpresaID"))" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
             Next
         </tbody>
-    </>
+    </table>
     <script type="text/javascript">
 
          function eliminar(id) {
@@ -60,7 +51,7 @@ End Code
                  };
 
                  $.ajax({
-                     url: '../Empleado/Eliminar',
+                     url: '../Sucursal/Eliminar',
                      data: parametros,
                      type: "post",
                      cache: false,

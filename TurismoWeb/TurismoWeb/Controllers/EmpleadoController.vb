@@ -1,4 +1,4 @@
-﻿Imports TurismoClases
+Imports TurismoClases
 Imports System.Web.Mvc
 Namespace Controllers
     Public Class EmpleadoController
@@ -7,6 +7,7 @@ Namespace Controllers
         ' GET: Empleado
         Function Index() As ActionResult
             Dim dtEmpleados As New DataTable
+            Dim vEmpleado As New Empleado
             dtEmpleados = Empleado.RecuperarRegistrosEmpleado
             ViewData("Empleado") = dtEmpleados.AsEnumerable
             Return View()

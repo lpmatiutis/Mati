@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
@@ -312,10 +312,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="Controllers\AlojamientoController.vb" />
     <Compile Include="Controllers\ClienteController.vb" />
     <Compile Include="Controllers\EmpleadoController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\ReservaController.vb" />
+    <Compile Include="Controllers\SucursalController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -382,9 +383,11 @@
     <Content Include="Views\Empleado\Index.vbhtml" />
     <Content Include="Views\Empleado\Create.vbhtml" />
     <Content Include="Views\Empleado\Edit.vbhtml" />
-    <Content Include="Views\Alojamiento\Index.vbhtml" />
-    <Content Include="Views\Alojamiento\Create.vbhtml" />
-    <Content Include="Views\Alojamiento\Edit.vbhtml" />
+    <Content Include="Views\Sucursal\Index.vbhtml" />
+    <Content Include="Views\Sucursal\Create.vbhtml" />
+    <Content Include="Views\Sucursal\Edit.vbhtml" />
+    <Content Include="Views\Plantillas\Plantilla.vbhtml" />
+    <Content Include="Views\Reserva\Index.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

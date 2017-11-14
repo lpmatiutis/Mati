@@ -355,23 +355,14 @@ begin
 end
 go
 
-create procedure spListarEmpleadoPorID (@id int)
+create procedure [dbo].[spListarSucursalID] @id int
+as
+begin
+	select * from SucursalEmpresa where SucursalEmpresaID = @id
+end
+
+create procedure [dbo].[spListarEmpleadoPorID] @id int
 as
 begin
 	select * from Empleado where EmpleadoID=@id
 end
-go
-
-CREATE PROCEDURE spListarAlojamientoPorID 
-	-- Add the parameters for the stored procedure here
-	@Id int
-AS
-BEGIN
-	-- SET NOCOUNT ON added to prevent extra result sets from
-	-- interfering with SELECT statements.
-	SET NOCOUNT ON;
-
-    -- Insert statements for procedure here
-	SELECT * FROM Alojamiento WHERE AlojamientoID=@Id
-END
-GO
