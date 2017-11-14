@@ -315,6 +315,7 @@
     <Compile Include="Controllers\ClienteController.vb" />
     <Compile Include="Controllers\EmpleadoController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
+    <Compile Include="Controllers\ReservaController.vb" />
     <Compile Include="Controllers\SucursalController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -386,6 +387,7 @@
     <Content Include="Views\Sucursal\Create.vbhtml" />
     <Content Include="Views\Sucursal\Edit.vbhtml" />
     <Content Include="Views\Plantillas\Plantilla.vbhtml" />
+    <Content Include="Views\Reserva\Index.vbhtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

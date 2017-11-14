@@ -354,3 +354,15 @@ begin
 	select * from Cliente where ClienteID=@id
 end
 go
+
+create procedure [dbo].[spListarSucursalID] @id int
+as
+begin
+	select * from SucursalEmpresa where SucursalEmpresaID = @id
+end
+
+create procedure [dbo].[spListarEmpleadoPorID] @id int
+as
+begin
+	select * from Empleado where EmpleadoID=@id
+end
