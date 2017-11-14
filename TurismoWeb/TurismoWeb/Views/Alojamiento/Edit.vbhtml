@@ -1,18 +1,9 @@
 ﻿@ModelType TurismoClases.Alojamiento
 @Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Modificar Alojamiento</title>
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-
-</head>
-<body>
     <div class="row">
         <div class="col-lg-4 col-md-7 col-sm-7 col-xs-12">
             <h1>
@@ -73,5 +64,3 @@ End Code
             </footer>
         </div>
     </form>
-</body>
-</html>

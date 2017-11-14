@@ -80,7 +80,7 @@ Public Class Alojamiento
 #Region "Metodos"
     Public Sub Insertar()
         Try
-            gDatos.Ejecutar("spInsertarAlojamiento", Nombre, Direccion, Telefono, PaginaWeb, Estrellas, EstadoSistema)
+            gDatos.Ejecutar("spInsertarAlojamiento", Me.Nombre, Me.Direccion, Me.Telefono, Me.PaginaWeb, Me.Estrellas, Me.EstadoSistema)
         Catch ex As Exception
             Throw ex
         End Try
@@ -88,7 +88,7 @@ Public Class Alojamiento
 
     Public Sub Actualizar()
         Try
-            gDatos.Ejecutar("spActualizarAlojamiento", AlojamientoID, Nombre, Direccion, Telefono, PaginaWeb, Estrellas, EstadoSistema)
+            gDatos.Ejecutar("spActualizarAlojamiento", Me.AlojamientoID, Me.Nombre, Me.Direccion, Me.Telefono, Me.PaginaWeb, Me.Estrellas, Me.EstadoSistema)
         Catch ex As Exception
             Throw ex
         End Try
@@ -96,7 +96,7 @@ Public Class Alojamiento
 
     Public Sub Eliminar()
         Try
-            gDatos.Ejecutar("spEliminarAlojamiento", AlojamientoID)
+            gDatos.Ejecutar("spEliminarAlojamiento", Me.AlojamientoID)
         Catch ex As Exception
             Throw ex
         End Try
@@ -123,7 +123,14 @@ Public Class Alojamiento
     End Function
 
     Public Shared Function RecuperarRegistros() As DataTable
-        Return gDatos.TraerDataTable("spListarAlojamiento")
+        Try
+            Dim dtAlojamiento As New Data.DataTable("Alojamiento")
+            dtAlojamiento = gDatos.TraerDataTable("spListarAlojamiento")
+            Return dtAlojamiento
+        Catch ex As Exception
+            Throw ex
+        End Try
+
     End Function
 #End Region
 End Class

@@ -1,21 +1,13 @@
 ﻿@Code
-    Layout = Nothing
+    Layout = "~/Views/Plantillas/Plantilla.vbhtml"
 End Code
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Alojamientos</title>
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
     <h1>Alojamientos</h1>
     <h2>
         <a href="/Alojamiento/Create" class="btn btn-success">+ Crear Nuevo</a>
     </h2>
-    <table class="table table-bordered table-hover">
+    <table id="mi_tabla" class="table table-striped table-hover table-bordered">
         <thead>
             <tr>
                 <th>AlojamientoID</th>
@@ -74,5 +66,3 @@ End Code
             }
         }
     </script>
-</body>
-</html>

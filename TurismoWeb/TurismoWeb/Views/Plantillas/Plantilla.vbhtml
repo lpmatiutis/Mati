@@ -123,6 +123,30 @@
                         </ul>
                     </li>
 
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>Reserva</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="Reserva"><i class="fa fa-circle-o"></i> Reserva</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span>Alojamiento</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="Alojamiento"><i class="fa fa-circle-o"></i> Alojamiento</a></li>
+
+                        </ul>
+                    </li>
+
                    
 
                 </ul>
