@@ -124,7 +124,7 @@ Public Class Alojamiento
 
     Public Shared Function RecuperarRegistros() As DataTable
         Try
-            Dim dtAlojamiento As New Data.DataTable("Alojamiento")
+            Dim dtAlojamiento As New DataTable
             dtAlojamiento = gDatos.TraerDataTable("spListarAlojamiento")
             Return dtAlojamiento
         Catch ex As Exception

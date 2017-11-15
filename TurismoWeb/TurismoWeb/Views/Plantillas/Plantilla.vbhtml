@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -23,7 +22,6 @@
     @*Agregamos el archivo css del jquery datatables*@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" />
 
-
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
@@ -31,7 +29,7 @@
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="index2.html" class="logo">
+            <a href="/" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>RE</b>S</span>
                 <!-- logo for regular state and mobile devices -->
@@ -90,42 +88,42 @@
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-laptop"></i>
+                            <i class="fa fa-users"></i>
                             <span>Cliente</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Cliente"><i class="fa fa-circle-o"></i> Cliente</a></li>
+                            <li><a href="/Cliente"><i class="fa fa-circle-o"></i> Cliente</a></li>
 
                         </ul>
                     </li>
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-user"></i>
                             <span>Empleado</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Empleado"><i class="fa fa-circle-o"></i> Empleados</a></li>
+                            <li><a href="/Empleado"><i class="fa fa-circle-o"></i> Empleados</a></li>
 
                         </ul>
                     </li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-shopping-cart"></i>
+                            <i class="fa fa-building-o"></i>
                             <span>Sucursal</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Sucursal"><i class="fa fa-circle-o"></i> Sucursal</a></li>
+                            <li><a href="/Sucursal"><i class="fa fa-circle-o"></i> Sucursal</a></li>
 
                         </ul>
                     </li>
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-shopping-cart"></i>
+                            <i class="fa fa-hotel"></i>
                             <span>Alojamiento</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
@@ -134,6 +132,16 @@
                         </ul>
                     </li>
 
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-plane"></i>
+                            <span>Reserva</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/Reserva"><i class="fa fa-circle-o"></i> Reserva</a></li>
+                        </ul>
+                    </li>
                    
 
                 </ul>
@@ -179,10 +187,9 @@
                         </div><!-- /.row -->
                     </div><!-- /.box-body -->
                 </div><!-- /.box -->
+            </section>
         </div><!-- /.col -->
     </div><!-- /.row -->
-    </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
     <!--Fin-Contenido-->
     <footer class="main-footer">
         <div class="pull-right hidden-xs">

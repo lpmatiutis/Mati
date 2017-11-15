@@ -4,7 +4,7 @@ End Code
 
 
     <h3>
-        <a href="/Cliente/Create" class="btn btn-success"> Nuevo CLiente </a>
+        <a href="/Cliente/Create" class="btn btn-success"> Nuevo Cliente </a>
     </h3>
 
     <table id="mi_tabla" class="table table-striped table-hover table-bordered">
@@ -13,40 +13,39 @@ End Code
                 <th>Codigo</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
-                <th>TipoDocumentoID</th>
-                <th>NroDocumentoID</th>
-                <th>EstadoCivil</th>
+                <th>Tipo Documento</th>
+                <th>Nro Documento</th>
+                <th>Estado Civil</th>
                 <th>Telefono</th>
                 <th>Direccion</th>
                 <th>Email</th>
-                <th>FechaNacimiento</th>
+                <th>Fecha Nacimiento</th>
+                <th>Profesión</th>
                 <th>Sexo</th>
-                <th>TipoClientes</th>
-                <th>EstadoSistema</th>
+                <th>Tipo Cliente</th>
+                <th>Estado Sistema</th>
             </tr>
         </thead>
         <tbody>
             @For Each item In ViewData("cliente")
                 @<tr>
-                    <td>@item("ClienteID")</td>
+                    <td>@item("Codigo")</td>
                     <td>@item("Nombre")</td>
                     <td>@item("Apellido")</td>
-                    <td>@item("TipoDocumentoID")</td>
-                    <td>@item("NroDocumento")</td>
-                    <td>@item("EstadoCivil")</td>
-                    <td>@item("Telefono")</td>
-                    <td>@item("Direccion")</td>
+                    <td>@item("Tipo Documento")</td>
+                    <td>@item("Numero Documento")</td>
+                    <td>@item("Estado Civil")</td>
                     <td>@item("Telefono")</td>
                     <td>@item("Direccion")</td>
                     <td>@item("Email")</td>
-                    <td>@item("FechaNacimiento")</td>
-                    <td>@item("ProfesionID")</td>
+                    <td>@Convert.ToDateTime(item("Fecha Nacimiento")).Date.ToShortDateString</td>
+                    <td>@item("Profesion")</td>
                     <td>@item("Sexo")</td>
-                    <td>@item("TipoClienteID")</td>
-                    <td>@item("EstadoSistema")</td>
+                    <td>@item("Tipo Cliente")</td>
+                    <td>@item("Estado Sistema")</td>
                     <td>
-                        <a href="Cliente/Edit/@item("ClienteID")" class="btn btn-info">Modificar</a>
-                        <a href="javascript:eliminar(@item("ClienteID"))" class="btn btn-danger">Eliminar</a>
+                        <a href="/Cliente/Edit/@item("Codigo")" class="btn btn-info"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Modificar</a>
+                        <a href="javascript:eliminar(@item("Codigo"))" class="btn btn-danger"> <i class="fa fa-trash" aria-hidden="true"></i> Eliminar</a>
                     </td>
                 </tr>
             Next
@@ -55,13 +54,13 @@ End Code
     <script type="text/javascript">
 
         function eliminar(id) {
-            if (confirm('Â¿Estas seguro de eliminar el registro?')) {
+            if (confirm('¿Estas seguro de eliminar el registro?')) {
                 var parametro = {
                     id: id
                 };
 
                 $.ajax({
-                    url: '../Cliente/Eliminar',
+                    url: '/Cliente/Delete',
                     data: parametro,
                     type: "post",
                     cache: false,
@@ -75,5 +74,3 @@ End Code
             }
         }
     </script>
-    <script src="~/js/jquery-3.2.1.min.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>

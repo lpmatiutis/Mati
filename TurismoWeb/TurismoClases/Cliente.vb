@@ -14,147 +14,135 @@ Public Class Cliente
     Private Email As String
     Private FechaNacimiento As Date
     Private Profesion As Integer
-    Private Sexo As Integer
+    Private Sexo As Boolean
     Private TipoClienteID As Integer
-    Private EstadoSistema As Integer
+    Private EstadoSistema As Boolean
 #End Region
 
 #Region "Propiedades"
-    Public Property pClienteID() As Integer
+
+    Public Property pClienteID As Integer
         Get
             Return ClienteID
         End Get
-
-        Set(ByVal value As Integer)
+        Set(value As Integer)
             ClienteID = value
         End Set
     End Property
 
-    Public Property pNombre() As String
+    Public Property pNombre As String
         Get
             Return Nombre
         End Get
-
-        Set(ByVal value As String)
+        Set(value As String)
             Nombre = value
         End Set
     End Property
-    Public Property pApellido() As String
+
+    Public Property pApellido As String
         Get
             Return Apellido
         End Get
-
-        Set(ByVal value As String)
+        Set(value As String)
             Apellido = value
         End Set
     End Property
 
-    Public Property pTipoDocumento() As Integer
+    Public Property pTipoDocumento As Integer
         Get
             Return TipoDocumento
         End Get
-
-        Set(ByVal value As Integer)
+        Set(value As Integer)
             TipoDocumento = value
         End Set
     End Property
 
-    Public Property pNroDocumento() As String
+    Public Property pNroDocumento As String
         Get
             Return NroDocumento
         End Get
-
-        Set(ByVal value As String)
+        Set(value As String)
             NroDocumento = value
         End Set
     End Property
 
-    Public Property pEstadoCivil() As String
+    Public Property pEstadoCivil As String
         Get
             Return EstadoCivil
         End Get
-
-        Set(ByVal value As String)
+        Set(value As String)
             EstadoCivil = value
         End Set
     End Property
 
-    Public Property pTelefono() As String
+    Public Property pTelefono As String
         Get
             Return Telefono
         End Get
-
-        Set(ByVal value As String)
+        Set(value As String)
             Telefono = value
         End Set
     End Property
 
-    Public Property pDireccion() As String
+    Public Property pDireccion As String
         Get
             Return Direccion
         End Get
-
-        Set(ByVal value As String)
+        Set(value As String)
             Direccion = value
         End Set
     End Property
 
-    Public Property pEmail() As String
+    Public Property pEmail As String
         Get
             Return Email
         End Get
-
-        Set(ByVal value As String)
+        Set(value As String)
             Email = value
         End Set
     End Property
 
-    Public Property pFechaNacimiento() As Date
+    Public Property pFechaNacimiento As Date
         Get
             Return FechaNacimiento
         End Get
-
-        Set(ByVal value As Date)
+        Set(value As Date)
             FechaNacimiento = value
         End Set
     End Property
 
-    Public Property pProfesion() As Integer
+    Public Property pProfesion As Integer
         Get
             Return Profesion
         End Get
-
-        Set(ByVal value As Integer)
+        Set(value As Integer)
             Profesion = value
         End Set
     End Property
 
-    Public Property pSexo() As Integer
+    Public Property pSexo As Boolean
         Get
             Return Sexo
         End Get
-
-        Set(ByVal value As Integer)
+        Set(value As Boolean)
             Sexo = value
         End Set
     End Property
 
-    Public Property pTipoClienteID() As Integer
+    Public Property pTipoClienteID As Integer
         Get
             Return TipoClienteID
         End Get
-
-        Set(ByVal value As Integer)
+        Set(value As Integer)
             TipoClienteID = value
         End Set
     End Property
 
-    Public Property pEstadoSistema() As Integer
+    Public Property pEstadoSistema As Boolean
         Get
             Return EstadoSistema
         End Get
-
-        Set(ByVal value As Integer)
+        Set(value As Boolean)
             EstadoSistema = value
         End Set
     End Property
@@ -186,7 +174,7 @@ Public Class Cliente
         End Try
     End Sub
 
-    Public Function RecuperarRegistro(ByVal vCodigo As Integer) As Cliente
+    Public Shared Function RecuperarRegistro(ByVal vCodigo As Integer) As Cliente
         Try
             Dim dtCliente As New Data.DataTable("cliente")
             dtCliente = gDatos.TraerDataTable("spListarClientePorID", vCodigo)

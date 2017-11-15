@@ -18,6 +18,9 @@ Namespace Controllers
             Dim dtClients As New DataTable
             dtClients = Cliente.RecuperarRegistrosCliente
             ViewData("Cliente") = dtClients.AsEnumerable
+            ViewData("profesion") = Profesion.RecuperarRegistros.AsEnumerable
+            ViewData("tipocliente") = TipoCliente.RecuperarRegistros.AsEnumerable
+            ViewData("tipodocumento") = TipoDocumento.RecuperarRegistros.AsEnumerable
             Return View()
         End Function
 
@@ -38,8 +41,6 @@ Namespace Controllers
                 .pSexo = form("sexo")
                 .pTipoClienteID = form("tipoclienteid")
                 .pEstadoSistema = form("estadosistema")
-
-
             End With
             vCliente.Insertar()
             Return RedirectToAction("Index")
@@ -47,13 +48,17 @@ Namespace Controllers
 
         Function Edit(id As Integer) As ActionResult
             Dim vCliente As New Cliente
-            vCliente = vCliente.RecuperarRegistro(id)
+            vCliente = Cliente.RecuperarRegistro(id)
+            ViewData("profesion") = Profesion.RecuperarRegistros.AsEnumerable
+            ViewData("tipocliente") = TipoCliente.RecuperarRegistros.AsEnumerable
+            ViewData("tipodocumento") = TipoDocumento.RecuperarRegistros.AsEnumerable
             Return View(vCliente)
         End Function
 
         <HttpPost>
         Function Edit(form As FormCollection) As ActionResult
             Dim vCliente As New Cliente
+            vCliente = Cliente.RecuperarRegistro(form("ClienteID"))
             vCliente.pNombre = form("nombre")
             vCliente.pApellido = form("apellido")
             vCliente.pTipoDocumento = form("tipodocumento")
@@ -70,6 +75,13 @@ Namespace Controllers
             vCliente.Actualizar()
             Return RedirectToAction("Index")
         End Function
-    End Class
 
+        <HttpPost>
+        Function Delete(id As Integer) As ActionResult
+            Dim vCliente As New Cliente
+            vCliente = Cliente.RecuperarRegistro(id)
+            vCliente.Eliminar()
+            Return RedirectToAction("Index")
+        End Function
+    End Class
 End Namespace
